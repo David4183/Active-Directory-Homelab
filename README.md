@@ -1,2 +1,18 @@
 # Active-Directory-Homelab
-Project Overview
+## 📌 Overview
+
+## 🧱 Environment
+
+## 🛠️ IT Tasks Performed
+
+## 🔐 User & Access Management
+
+## ⚙️ Group Policy Implementation
+
+## 🌐 Networking & Troubleshooting
+
+## 🧪 Results
+
+## 📸 Screenshots
+
+## 💡 Skills Demonstrated
