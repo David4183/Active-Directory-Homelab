@@ -15,45 +15,38 @@ Domain: homelab.local
 
 Network	VirtualBox: Internal Network (homelab)
 
-Lab Architecture
-                     Active Directory Domain
-                          homelab.local
-                                |
-                                |
-                    Windows Server 2022
-                         DC01
-                    192.168.1.10
-                                |
-                  -------------------------
-                  |                       |
-                 AD DS                   DNS
-                  |                       |
-                  -------------------------
-                                |
-                         Internal Network
-                            "homelab"
-                                |
-                                |
-                    Windows 10 Client
-                         CLIENT01
-                    192.168.1.20
-Objectives
+
+
+## Objectives
 
 The objectives of this lab were to:
 
 Deploy a Windows Server 2022 virtual machine
+
 Configure a static IP address on the Domain Controller
+
 Install Active Directory Domain Services
+
 Promote the server to a Domain Controller
+
 Create the homelab.local Active Directory domain
+
 Configure and utilize DNS for Active Directory
+
 Deploy a Windows 10 client virtual machine
+
 Configure static IP addressing on the client
+
 Configure the client to use the Domain Controller for DNS
+
 Test network connectivity between the client and Domain Controller
+
 Test DNS resolution for the Active Directory domain
+
 Join the Windows 10 client to the Active Directory domain
+
 Authenticate to the domain using a domain user account
+
 Implementation
 1. Virtual Machine Deployment
 
