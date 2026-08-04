@@ -21,7 +21,7 @@ Network	VirtualBox: Internal Network (homelab)
 ## Implementation
 1. Virtual Machine Deployment
 
-Created two virtual machines in Oracle VirtualBox:
+  Created two virtual machines in Oracle VirtualBox:
 
 DC01
 
