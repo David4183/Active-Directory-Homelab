@@ -4,21 +4,15 @@ This project was conducted to built a virtualized Windows Active Directory to de
 
 The lab simulates a small enterprise environment using VirtualBox and multiple Windows virtual machines.
 
-Lab Environment
-Component	Configuration
-Hypervisor	Oracle VirtualBox
-Domain Controller	Windows Server 2022
+## Lab Environment
+Hypervisor: Oracle VirtualBox
 Domain Controller Hostname	DC01
-Domain Client	Windows 10
-Client Hostname	CLIENT01
+Client Hostname:	CLIENT01
 Active Directory Domain	homelab.local
 Domain Controller IP	192.168.1.10
 Client IP	192.168.1.20
 Network	VirtualBox Internal Network (homelab)
-Server RAM	4 GB
-Server Storage	60 GB
-Client RAM	4 GB
-Client Storage	50 GB
+
 Lab Architecture
                      Active Directory Domain
                           homelab.local
