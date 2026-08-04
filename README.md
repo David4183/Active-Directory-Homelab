@@ -6,12 +6,14 @@ The lab simulates a small enterprise environment using VirtualBox and multiple W
 
 ## Lab Environment
 Hypervisor: Oracle VirtualBox
-Domain Controller Hostname	DC01
-Client Hostname:	CLIENT01
-Active Directory Domain	homelab.local
-Domain Controller IP	192.168.1.10
-Client IP	192.168.1.20
-Network	VirtualBox Internal Network (homelab)
+
+Domain Controller: Windows Server 2022 (DC01)
+
+Client Hostname:	Windows 10 (CLIENT01)
+
+Domain: homelab.local
+
+Network	VirtualBox: Internal Network (homelab)
 
 Lab Architecture
                      Active Directory Domain
