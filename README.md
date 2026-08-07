@@ -35,3 +35,69 @@ The lab simulates a small enterprise environment using VirtualBox and multiple W
 -  Connected both virtual machines to the same VirtualBox Internal Network
 -  Tested connectivity between the client and Domain Controller using ping
 
+## Lab Setup Process
+### Step 1: Domain Controller Setup
+-  Created a Windows Server 2022 VM named DC01
+-  Allocated 4 GB RAM and 60 GB storage
+-  Connected the VM to the homelab Internal Network
+-  Installed Windows Server 2022
+-  Configured a static IP address of 192.168.1.10
+-  Installed the Active Directory Domain Services role through Server Manager
+-  Promoted DC01 to a Domain Controller
+-  Created the homelab.local Active Directory domain
+### Step 2: Client Configuration
+-  Created a Windows 10 VM named CLIENT01
+-  Allocated 4 GB RAM and 50 GB storage
+-  Connected the VM to the same homelab Internal Network
+-  Installed Windows 10
+-  Configured a static IP address of 192.168.1.20
+-  Configured the Domain Controller (192.168.1.10) as the client's DNS server
+### Step 3: Connectivity & DNS Testing
+-  Tested connectivity from CLIENT01 to DC01 using ping
+-  Tested DNS resolution using nslookup
+-  Verified that CLIENT01 could resolve homelab.local
+-  Confirmed communication between the client and Domain Controller
+### Step 4: Domain Join & Authentication
+-  Joined CLIENT01 to the homelab.local domain
+-  Provided domain administrator credentials during the domain join process
+-  Restarted the client to complete the domain join
+-  Logged into the client using a domain user account
+-  Verified successful Active Directory authentication
+
+## Skills Demonstrated
+-  Windows Server 2022 administration
+-  Active Directory Domain Services (AD DS)
+-  Domain Controller deployment
+-  DNS configuration and management
+-  Static IP configuration
+-  Windows 10 client configuration
+-  Active Directory domain joining
+-  Domain authentication
+-  Network connectivity testing
+-  DNS troubleshooting
+-  Virtualization (Oracle VirtualBox)
+-  Basic TCP/IP networking
+
+## Key Learnings
+-  Understanding of Active Directory domain environments
+-  Hands-on experience deploying a Windows Server Domain Controller
+-  Understanding of the relationship between Active Directory and DNS
+-  Experience configuring static IP addresses and DNS settings
+-  Experience joining Windows clients to an Active Directory domain
+-  Understanding of domain-based authentication
+-  Experience troubleshooting basic network and DNS connectivity
+
+## Future Improvements
+-  Add a Windows 11 client
+-  Create Organizational Units (OUs)
+-  Create additional domain users and security groups
+-  Configure Group Policy Objects (GPOs)
+-  Implement password complexity policies
+-  Create shared folders
+-  Configure NTFS and share permissions
+-  Add a Windows Server member server
+-  Expand the environment into a larger simulated enterprise network
+
+## Resources & References
+-  Active Directory home lab setup guide used as a reference for the initial lab configuration
+-  Microsoft documentation for Windows Server and Active Directory Domain Services
