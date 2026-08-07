@@ -5,140 +5,33 @@ This project was conducted to built a virtualized Windows Active Directory to de
 The lab simulates a small enterprise environment using VirtualBox and multiple Windows virtual machines.
 
 ## Lab Environment
-Hypervisor: Oracle VirtualBox
+-  Virtualization Platform: Oracle VirtualBox
+-  Domain Controller: Windows Server 2022 (DC01)
+-  Client Machine: Windows 10 (CLIENT01)
+-  Domain: homelab.local
+-  Domain Controller IP: 192.168.1.10
+-  Client IP: 192.168.1.20
+-  Network: VirtualBox Internal Network (homelab)
+-  Server Resources: 4 GB RAM, 60 GB storage
+-  Client Resources: 4 GB RAM, 50 GB storage
 
-Domain Controller: Windows Server 2022 (DC01)
+## Technologies Used
+### Active Directory Domain Services (AD DS)
+-  Installed the Active Directory Domain Services role
+-  Promoted Windows Server 2022 to a domain controller
+-  Created the homelab.local domain
+-  Configured and managed the Active Directory environment
+-  Joined Windows 10 client to the domain
+-  Verified domain authentication using a domain user account
 
-Client Hostname:	Windows 10 (CLIENT01)
+### DNS Configuration
+-  Configured DNS as part of the Active Directory environment
+-  Configured the Windows 10 client to use the Domain Controller as its DNS server
+- Tested DNS resolution using nslookup
+-  Verified resolution of the homelab.local domain
+### Network Configuration
+-  Configured static IP addressing for the Domain Controller
+-  Configured static IP addressing for the Windows 10 client
+-  Connected both virtual machines to the same VirtualBox Internal Network
+-  Tested connectivity between the client and Domain Controller using ping
 
-Domain: homelab.local
-
-Network	VirtualBox: Internal Network (homelab)
-
-
-
-
-## Implementation
-1. Virtual Machine Deployment
-
-  Created two virtual machines in Oracle VirtualBox:
-
-DC01
-
-Operating System: Windows Server 2022
-RAM: 4 GB
-Storage: 60 GB
-Network: Internal Network (homelab)
-
-CLIENT01
-
-Operating System: Windows 10
-RAM: 4 GB
-Storage: 50 GB
-Network: Internal Network (homelab)
-
-Both virtual machines were connected to the same VirtualBox Internal Network to allow communication between the Domain Controller and client.
-
-2. Domain Controller Configuration
-
-Installed Windows Server 2022 on DC01 and configured a static IP address.
-
-The Domain Controller was assigned:
-
-192.168.1.10
-
-The Active Directory Domain Services (AD DS) role was installed through Windows Server Manager.
-
-After installing AD DS, DC01 was promoted to a Domain Controller and the Active Directory domain was created:
-
-homelab.local
-
-3. Client Network Configuration
-
-Windows 10 was installed on CLIENT01 and configured with a static IP address through the Windows graphical network settings interface.
-
-The client was configured with the following network settings:
-
-IP Address: 192.168.1.20
-Subnet Mask: 255.255.255.0
-Default Gateway: 192.168.1.1
-Preferred DNS Server: 192.168.1.10
-
-The Domain Controller (DC01) was configured as the client's preferred DNS server to allow CLIENT01 to resolve the homelab.local Active Directory domain and locate domain services.
-
-4. Connectivity Testing
-
-Network connectivity between CLIENT01 and DC01 was tested using ping.
-
-ping 192.168.1.10
-
-DNS resolution was tested using nslookup.
-
-nslookup homelab.local
-
-Successful responses confirmed that CLIENT01 could communicate with the Domain Controller and resolve the Active Directory domain through the configured DNS server.
-
-5. Joining the Client to the Domain
-
-After verifying network connectivity and DNS resolution, CLIENT01 was joined to the homelab.local Active Directory domain.
-
-Domain administrator credentials were provided during the domain join process.
-
-CLIENT01 was then restarted to complete the domain join.
-
-6. Domain Authentication
-
-After restarting CLIENT01, the domain login option was selected from the Windows login screen.
-
-A domain user account was used to authenticate to the Windows 10 client.
-
-This verified that:
-
-The client successfully joined the Active Directory domain
-The client could communicate with the Domain Controller
-DNS was correctly configured
-Active Directory authentication was functioning
-Testing and Verification
-
-The following tests were performed:
-
-Test	Purpose	Result
-ping 192.168.1.10	Verify client-to-server connectivity	Successful
-nslookup homelab.local	Verify DNS resolution	Successful
-Domain Join	Verify Active Directory connectivity	Successful
-Domain Login	Verify domain authentication	Successful
-Skills Demonstrated
-Windows Server 2022 Administration
-Active Directory Domain Services (AD DS)
-Domain Controller Deployment
-DNS Configuration
-Static IP Configuration
-Windows 10 Client Configuration
-Active Directory Domain Joining
-Domain Authentication
-Network Connectivity Testing
-DNS Troubleshooting
-Virtual Machine Deployment
-Oracle VirtualBox
-Future Improvements
-
-Future enhancements to this lab may include:
-
-Add a Windows 11 client to the Active Directory domain
-Create Organizational Units (OUs)
-Create and manage additional domain users
-Create departmental security groups
-Create separate OUs for IT, HR, and Finance
-Configure Group Policy
-Implement password complexity policies
-Create shared folders
-Configure NTFS and share permissions
-Add a Windows Server member server
-Expand the lab into a larger simulated enterprise environment
-Project Outcome
-
-Successfully deployed and tested a functional Active Directory environment consisting of a Windows Server 2022 Domain Controller and a Windows 10 domain client.
-
-The lab demonstrates hands-on experience with deploying a Domain Controller, configuring Active Directory Domain Services, configuring DNS, assigning static IP addresses, testing network connectivity, joining a Windows client to an Active Directory domain, and authenticating users through the domain.
-
-This project provides practical experience with foundational technologies commonly used in Windows-based enterprise IT environments and supports the development of skills relevant to entry-level IT support, help desk, and system administration roles.
